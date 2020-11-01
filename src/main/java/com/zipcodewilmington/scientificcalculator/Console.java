@@ -58,6 +58,15 @@ public class Console {
 
     public static void main(String[] args) {
 
+
+
+
+
+
+
+        //print current number
+        //print menu
+
     
 
 
