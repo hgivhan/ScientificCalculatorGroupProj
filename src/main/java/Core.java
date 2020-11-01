@@ -2,98 +2,47 @@ import java.util.Scanner;
 
 public class Core {
 
-    public double num1;
-    public double num2;
-    public char operator;
-    public int exponent;
-    public double output;
-
     Scanner chdScan = new Scanner(System.in);
 
-// default state... is this how to do it?
-
-    System.out.println("0");
 
 /* method for + - * /
 with ERR message for division by 0 and wrong operator*/
 
-    public void Simple(Strings[] args) {
-        System.out.println("Enter first number: ");
-        num1 = chdScan.nextDouble();
-        else(System.out.println("Enter second number: "));
-        num2 = chdScan.nextDouble();
-        System.out.println("Choose operator: ");
-        operator = chdScan.next.charAt(0);
+    private static double Add(double num1, double num2) {
+        return num1 + num2;
+    }
 
-        switch (operator) {
-            case '+':
-                output = num1 + num2;
-                break;
-            case '-':
-                output = num1 - num2;
-                break;
-            case '*':
-                output = num1 * num2;
-                break;
-            case '/':
-                output = num1 / num2;
-                break;
-            default:
-                System.out.printf("ERR: wrong operator");
-        }
-        if (output = num1 / 0) {
-            System.out.println("ERR");
+    private static double Subtract(double num1, double num2) {
+        return num1 - num2;
+    }
+
+    private static double Multiply(double num1, double num2) {
+        return num1 * num2;
+    }
+    private static double Divide(double num1, double num2, String errormsg) {
+        errormsg = "Err, cannot divide by 0";
+        if (num2 == 0) {
+            System.out.println(errormsg);
         } else {
-            System.out.println(output);
+            return num1 / num2;
         }
     }
 
-// method for finding square root
-
-    public void SquareRoot(Strings[] args) {
-
-        System.out.println("Enter first number: ");
-        num1 = chdScan.nextDouble();
-        System.out.println("Choose operator: ");
-        operator = chdScan.next.charAt(0);
-        output = Math.sqrt(num1);
-
-        System.out.println(output);
+    private static double SquareRoot(double num1) {
+        return Math.sqrt(num1);
     }
 
-// method for exponents
-
-    public void Square(Strings[] args) {
-
-        System.out.println("Enter first number: ");
-        num1 = chdScan.nextDouble();
-        System.out.println("Choose operator: ");
-        operator = chdScan.next.charAt(0);
-        System.out.println("Enter exponent: ");
-        exponent = chdScan.next.int();
-        output = Math.pow(num1, x);
-
-        System.out.println(output);
+    private static double Square(double num1, int exponent) {
+        return Math.pow(num1, exponent);
     }
 
-//method for changing number to negative or positive
-
-    public void NegPos(Strings[] args) {
-        double change = output *= -1;
-        System.out.println(output);
+    private static double NegPos(int num1) {
+        return num1 *= -1;
     }
 
-//method for inverting a number
-
-     public void Inverse(Strings[] args){
-        double inversion = 1 / output;
-         System.out.println(output);
+    private static double Inverse(double num1){
+        return 1 / num1;
      }
 
-//method for clearing display for general use, must use if Error
-     public void Clear(Strings[] args){
-        int reset = 0;
-        System.out.println(reset);
       }
-    }
 
