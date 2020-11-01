@@ -18,7 +18,7 @@ public class Console {
     public static void startConsole(){
         Scanner scan = new Scanner(System.in);
         boolean keepOn = true;
-        System.out.println("Welcome to CHD's Calculator");
+        System.out.println("Welcome to CHD's Calculator"); 
 
         while (keepOn) {
             Console.print("\n" +
@@ -58,7 +58,7 @@ public class Console {
 
     public static void main(String[] args) {
 
-    
+
 
 
         /* print current number
