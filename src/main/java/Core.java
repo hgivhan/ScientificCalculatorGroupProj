@@ -21,11 +21,14 @@ with ERR message for division by 0 and wrong operator*/
     }
     private static double Divide(double num1, double num2, String errormsg) {
         errormsg = "Err, cannot divide by 0";
+        double answer;
+
         if (num2 == 0) {
             System.out.println(errormsg);
         } else {
-            return num1 / num2;
+            answer = num1 / num2;
         }
+        return answer;
     }
 
     private static double SquareRoot(double num1) {
