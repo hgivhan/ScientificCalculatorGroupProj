@@ -17,9 +17,12 @@ public class Core {
         System.out.println("Choose operator: ");
         operator = chdScan.next.charAt(0);
     }
+
     double output;
 
-        switch(operator){
+        switch(operator)
+
+    {
         case '+':
             output = num1 + num2;
             break;
@@ -35,10 +38,14 @@ public class Core {
         default:
             System.out.printf("ERR: wrong operator");
     }
-        if(output =num1 /0){
+        if(output =num1 /0)
+
+    {
         System.out.println("ERR");
     }
-        else{
+        else
+
+    {
         System.out.println(output);
     }
 
@@ -60,4 +67,3 @@ public class Core {
         System.out.println(Math.pow(num1, x));
     }
 }
-
