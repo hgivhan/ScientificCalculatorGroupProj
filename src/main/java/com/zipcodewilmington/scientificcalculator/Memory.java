@@ -10,7 +10,7 @@ public class Memory {
         this.memoryChanged = false;
     }
 
-    public void MemoryActions() {
+    public void memoryActions() {
 
         Console.println("Menu"
                 + "\n1: M+ Add value to value in memory"
@@ -19,7 +19,7 @@ public class Memory {
                 + "\n4: Go back to Main Menu"
         );
 
-        String menuSelection = "";
+        String menuSelection = " ";
 
         while(!menuSelection.equals("4")) {
 
@@ -42,7 +42,7 @@ public class Memory {
     }
 
     public Double updateMemory(Double memoryInput){
-        return this.memory = memoryInput;
+        return this.memory += memoryInput;
     }
 
     public Double clearMemory() {
