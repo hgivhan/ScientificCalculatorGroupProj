@@ -27,12 +27,12 @@ with ERR message for division by 0 and wrong operator*/
     }
 
     public Double subtract(Double num1, Double num2) {
-        answer = num1 + num2;
+        answer = num1 - num2;
         return answer;
     }
 
     public Double multiply(Double num1, Double num2) {
-        answer = num1 + num2;
+        answer = num1 * num2;
         return answer;
     }
 
