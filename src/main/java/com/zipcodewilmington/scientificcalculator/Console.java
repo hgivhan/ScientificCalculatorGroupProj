@@ -6,19 +6,12 @@ import java.util.Scanner;
 
 public class Console {
 
-    public static void print(String output, Object... args) {
-        System.out.println(output, args);
-    }
+    public static void main(String[] args){
+        Core core = new Core();
 
-    public static void println(String output, Object... args) {
-        print(output + "\n", args);
-
-    }
-
-    public static void startConsole(){
         Scanner scan = new Scanner(System.in);
         boolean keepOn = true;
-        System.out.println("Welcome to CHD's Calculator"); 
+        System.out.println("Welcome to CHD's Calculator");
 
         while (keepOn) {
             Console.print("\n" +
@@ -34,7 +27,25 @@ public class Console {
                 int input = scan.nextInt();
                 switch (input) {
                     case 1:
-                        // BasicCalculator.basicCalculatorOptions();
+                        core.Basic();
+                        Double basicInput1 = new Double(0);
+                        Double basicInput2 = new Double(0);
+
+                        String basicMode = Console.getStringInput("Enter the mode: ");
+
+                        basicInput1 = Console.getDoubleInput("Enter the first input: ");
+                        basicInput2 = Console.getDoubleInput("Enter the second input: ");
+
+                        Double basicAnswer = new Double(0);
+
+                        if(basicMode.equals("1")) {
+                            basicAnswer = core.add(basicInput1, basicInput2);
+                        } else if(basicMode.equals("2")) {
+                            basicAnswer = core.subtract(basicInput1, basicInput2);
+                        } else if(basicMode.equals("3")) {
+                            basicAnswer = core.
+                        }
+                         // BasicCalculator.basicCalculatorOptions();
                         break;
                     case 2:
                         // ScientificCalculator.scientificCalculatorOptions();
@@ -52,15 +63,40 @@ public class Console {
             }
 
         }
-        }
-
     }
 
-    public static void main(String[] args) {
+    public static void print(String output, Object... args) {
+        System.out.printf(output, args);
+    }
+
+    public static void println(String output, Object... args) {
+        print(output + "\n", args);
+    }
+
+    public static String getStringInput(String prompt) {
+        Scanner scanner = new Scanner(System.in);
+        println(prompt);
+        String userInput = scanner.nextLine();
+        return userInput;
+    }
+
+    public static Integer getIntegerInput(String prompt) {
+        Scanner scanner = new Scanner(System.in);
+        println(prompt);
+        Integer userInput = scanner.nextInt();
+        return userInput;
+    }
+
+    public static Double getDoubleInput(String prompt) {
+        Scanner scanner = new Scanner(System.in);
+        println(prompt);
+        Double userInput = scanner.nextDouble();
+        return userInput;
+    }
+
+}
 
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -70,7 +106,7 @@ public class Console {
         //print menu
 
     
->>>>>>> 980d09f4e09282ab12ce3c20e23c2c9a6b60fb8d
+
 
 
         /* print current number
@@ -81,8 +117,5 @@ public class Console {
 
         input numbers as argument(s)
         return updated number to console
-    }
 
-}
-
-         */
+*/

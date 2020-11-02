@@ -1,36 +1,57 @@
+package com.zipcodewilmington.scientificcalculator;
+
 import java.util.Scanner;
 
 public class Core {
-
     double answer;
 
     Scanner chdScan = new Scanner(System.in);
 
+    public void Basic()
+    {
+        Console.println("Basic Calculator Options"
+                + "\n1: Add"
+                + "\n2: Subtract"
+                + "\n3: Multiplication"
+                + "\n4: Division"
+                + "\n5: Cancel - returns to Main Menu");
 
-/* method for + - * /
+    }
+
+    /* method for + - * /
 with ERR message for division by 0 and wrong operator*/
 
     public Double add(Double num1, Double num2) {
-
         answer = num1 + num2;
         return answer;
     }
 
-    private static double subtract(double num1, double num2) {
-        return num1 - num2;
+    public Double subtract(Double num1, Double num2) {
+        answer = num1 + num2;
+        return answer;
     }
 
-    private static double Multiply(double num1, double num2) {
-        return num1 * num2;
+    public Double multiply(Double num1, Double num2) {
+        answer = num1 + num2;
+        return answer;
     }
+
+    public Double divide(Double num1, Double num2) {
+        answer = num1 + num2;
+        return answer;
+    }
+
+//    private static double subtract(double num1, double num2) {
+//        return num1 - num2;
+//    }
+
+//    private static double Multiply(double num1, double num2) {
+//        return num1 * num2;
+//    }
     private static double Divide(double num1, double num2, String errormsg) {
         errormsg = "Err, cannot divide by 0";
-<<<<<<< HEAD
-        double answer;
-=======
         Double answer = new Double(0);
 
->>>>>>> 78f96e11a8a3701e9227d791e8312d722dc0def6
         if (num2 == 0) {
             System.out.println(errormsg);
         } else {
@@ -53,9 +74,7 @@ with ERR message for division by 0 and wrong operator*/
 
     private static double Inverse(double num1){
         return 1 / num1;
-     }
+    }
 
-      }
 
-//      public
-
+}
