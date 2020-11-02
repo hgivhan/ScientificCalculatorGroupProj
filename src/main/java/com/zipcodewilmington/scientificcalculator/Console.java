@@ -11,10 +11,10 @@ public class Console {
 
         Scanner scan = new Scanner(System.in);
         boolean keepOn = true;
-        System.out.println("Welcome to CHD's Calculator");
+//        System.out.println("Welcome to CHD's Calculator");
 
         while (keepOn) {
-            Console.print("\n" +
+            Console.print("Welcome to CHD's Calculator\n" +
                     "Choose from menu:\n" +
                     "Type 1 - Basic Calculator: \n" +
                     "Type 2 - Scientific Calculator: \n" +
@@ -28,24 +28,38 @@ public class Console {
                 switch (input) {
                     case 1:
                         core.Basic();
-                        Double basicInput1 = new Double(0);
-                        Double basicInput2 = new Double(0);
+                        Double input1 = new Double(0);
+                        Double input2 = new Double(0);
 
-                        String basicMode = Console.getStringInput("Enter the mode: ");
+                        String mode = Console.getStringInput("Enter the mode: ");
 
-                        basicInput1 = Console.getDoubleInput("Enter the first input: ");
-                        basicInput2 = Console.getDoubleInput("Enter the second input: ");
+                        input1 = Console.getDoubleInput("Enter the first input: ");
+                        input2 = Console.getDoubleInput("Enter the second input: ");
 
-                        Double basicAnswer = new Double(0);
+                        Double answer = new Double(0);
 
-                        if(basicMode.equals("1")) {
-                            basicAnswer = core.add(basicInput1, basicInput2);
-                        } else if(basicMode.equals("2")) {
-                            basicAnswer = core.subtract(basicInput1, basicInput2);
-                        } else if(basicMode.equals("3")) {
-                            basicAnswer = core.
+                        if(mode.equals("1")) {
+                            answer = core.add(input1, input2);
+                        } else if(mode.equals("2")) {
+                            answer = core.subtract(input1, input2);
+                        } else if(mode.equals("3")) {
+                            answer = core.multiply(input1, input2);
+                        } else if(mode.equals("4")) {
+                            if(input2 == 0) {
+                                Console.println("undefined");
+                                answer = Double.NaN;
+                            } else {
+                                answer = core.divide(input1, input2);
+                            }
+                        } else if(mode.equals("5")) {
+                            Console.println(" ");
+                            break;
+                        } else {
+                            Console.println("Not a valid selection, please select again");
                         }
-                         // BasicCalculator.basicCalculatorOptions();
+
+                        Console.println(Double.toString(answer));
+
                         break;
                     case 2:
                         // ScientificCalculator.scientificCalculatorOptions();
