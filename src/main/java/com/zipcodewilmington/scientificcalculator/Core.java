@@ -12,9 +12,9 @@ public class Core {
         Console.println("Basic Calculator Options"
                 + "\n1: Add"
                 + "\n2: Subtract"
-                + "\n3: Multiplication"
-                + "\n4: Division"
-                + "\n5: Cancel - returns to Main Menu");
+                + "\n3: Multiply"
+                + "\n4: Divide"
+                + "\n5: Cancel - return to the Main Menu");
 
     }
 
@@ -37,7 +37,7 @@ with ERR message for division by 0 and wrong operator*/
     }
 
     public Double divide(Double num1, Double num2) {
-        answer = num1 + num2;
+        answer = num1 / num2;
         return answer;
     }
 
@@ -48,17 +48,17 @@ with ERR message for division by 0 and wrong operator*/
 //    private static double Multiply(double num1, double num2) {
 //        return num1 * num2;
 //    }
-    private static double Divide(double num1, double num2, String errormsg) {
-        errormsg = "Err, cannot divide by 0";
-        Double answer = new Double(0);
-
-        if (num2 == 0) {
-            System.out.println(errormsg);
-        } else {
-            answer = num1 / num2;
-        }
-        return answer;
-    }
+//    private static double Divide(double num1, double num2, String errormsg) {
+//        errormsg = "Err, cannot divide by 0";
+//        Double answer = new Double(0);
+//
+//        if (num2 == 0) {
+//            System.out.println(errormsg);
+//        } else {
+//            answer = num1 / num2;
+//        }
+//        return answer;
+//    }
 
     private static double SquareRoot(double num1) {
         return Math.sqrt(num1);
