@@ -52,8 +52,8 @@ public class Console {
                                 answer = core.divide(input1, input2);
                             }
                         } else if(mode.equals("5")) {
-                            Console.println(" ");
-                            break;
+                            keepOn = false;
+                            System.out.println("Turning off!");
                         } else {
                             Console.println("Not a valid selection, please select again");
                         }
