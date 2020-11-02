@@ -1,0 +1,33 @@
+@startuml
+class Console {
+    + input1: double
+    + input2: double
+    + answer: double
+    + keepOn: boolean
+
+    + print()
+    + println()
+    + getTitle()
+    + getStringInput()
+    + getIntegerInput()
+    + getDoubleInput()
+}
+
+    class Core {
+    + answer: double
+
+    + Basic()
+    + add()
+    + subtract()
+    + multiply()
+    + divide()
+
+}
+
+
+User "1" -- "*" Article
+@enduml
+
+
+
+
