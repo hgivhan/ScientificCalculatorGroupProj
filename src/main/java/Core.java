@@ -25,8 +25,12 @@ with ERR message for division by 0 and wrong operator*/
     }
     private static double Divide(double num1, double num2, String errormsg) {
         errormsg = "Err, cannot divide by 0";
+<<<<<<< HEAD
+        double answer;
+=======
         Double answer = new Double(0);
 
+>>>>>>> 78f96e11a8a3701e9227d791e8312d722dc0def6
         if (num2 == 0) {
             System.out.println(errormsg);
         } else {
