@@ -8,6 +8,7 @@ public class Menu {
 
     public void runMenu() {
         Core core = new Core();
+        Memory memoryFunction = new Memory();
 
         Scanner scan = new Scanner(System.in);
         boolean keepOn = true;
@@ -64,8 +65,31 @@ public class Menu {
                     case 2:
                         // ScientificCalculator.scientificCalculatorOptions();
                         break;
+
                     case 3:
-                        // System.out.println(currentMemory);
+                        memoryFunction.memoryActions();
+                        Double memoryInput = new Double(0);
+
+                        String memoryMode = Console.getStringInput("Enter the mode: ");
+
+                        while(!memoryMode.equals("4")) {
+                            if (memoryMode.equals("1")) {
+                                memoryInput = Console.getDoubleInput("Enter the value you want to add to the value currently in memory");
+                                memoryFunction.updateMemory(memoryInput);
+                                Console.println("Current value stored in memory: " + memoryFunction.getMemory());
+                                break;
+                            } else if (memoryMode.equals("2")) {
+                                memoryFunction.clearMemory();
+                                Console.println("Memory has been cleared");
+                                break;
+                            } else if (memoryMode.equals("3")) {
+                                Console.println("Current value stored in Memory: " + memoryFunction.getMemory());
+                                break;
+                            } else {
+                                Console.println("Invalid option selected, please try again.");
+                                break;
+                            }
+                        }
                         break;
                     case 4:
                         keepOn = false;
@@ -78,9 +102,8 @@ public class Menu {
 
         }
     }
-        
 
-    }
+}
 
 /* Hillary: In the Menu class, there needs to be a runMenu() method because
        I used Menu.runMenu() to call the Menu class from the MainApplication class..
