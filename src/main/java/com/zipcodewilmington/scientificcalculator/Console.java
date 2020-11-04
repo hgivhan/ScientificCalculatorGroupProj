@@ -6,79 +6,6 @@ import java.util.Scanner;
 
 public class Console {
 
-    public static void main(String[] args){
-        Core core = new Core();
-
-        Scanner scan = new Scanner(System.in);
-        boolean keepOn = true;
-//        System.out.println("Welcome to CHD's Calculator");
-
-        while (keepOn) {
-            Console.print("Welcome to CHD's Calculator\n" +
-                    "Choose from menu:\n" +
-                    "Type 1 - Basic Calculator: \n" +
-                    "Type 2 - Scientific Calculator: \n" +
-                    "Type 3 - Memory: \n" +
-                    "Type 4 - Quit \n" +
-                    "Your work = " + "\n" +
-                    "Enter choice here: ");
-
-            try {
-                int input = scan.nextInt();
-                switch (input) {
-                    case 1:
-                        core.Basic();
-                        Double input1 = new Double(0);
-                        Double input2 = new Double(0);
-
-                        String mode = Console.getStringInput("Enter the mode: ");
-
-                        input1 = Console.getDoubleInput("Enter the first input: ");
-                        input2 = Console.getDoubleInput("Enter the second input: ");
-
-                        Double answer = new Double(0);
-
-                        if(mode.equals("1")) {
-                            answer = core.add(input1, input2);
-                        } else if(mode.equals("2")) {
-                            answer = core.subtract(input1, input2);
-                        } else if(mode.equals("3")) {
-                            answer = core.multiply(input1, input2);
-                        } else if(mode.equals("4")) {
-                            if(input2 == 0) {
-                                Console.println("undefined");
-                                answer = Double.NaN;
-                            } else {
-                                answer = core.divide(input1, input2);
-                            }
-                        } else if(mode.equals("5")) {
-                            Console.println(" ");
-                            break;
-                        } else {
-                            Console.println("Not a valid selection, please select again");
-                        }
-
-                        Console.println(Double.toString(answer));
-
-                        break;
-                    case 2:
-                        // ScientificCalculator.scientificCalculatorOptions();
-                        break;
-                    case 3:
-                        // System.out.println(currentMemory);
-                        break;
-                    case 4:
-                        keepOn = false;
-                        System.out.println("Turning off!");
-                }
-            } catch (InputMismatchException e) {
-                scan.next();
-                System.out.println("\n" + "Please choose option that's on the menu bruh!");
-            }
-
-        }
-    }
-
     public static void print(String output, Object... args) {
         System.out.printf(output, args);
     }
@@ -94,13 +21,6 @@ public class Console {
         return userInput;
     }
 
-    public static Integer getIntegerInput(String prompt) {
-        Scanner scanner = new Scanner(System.in);
-        println(prompt);
-        Integer userInput = scanner.nextInt();
-        return userInput;
-    }
-
     public static Double getDoubleInput(String prompt) {
         Scanner scanner = new Scanner(System.in);
         println(prompt);
@@ -108,28 +28,6 @@ public class Console {
         return userInput;
     }
 
-}
+    }
 
 
-
-
-
-
-
-        //print current number
-        //print menu
-
-    
-
-
-
-        /* print current number
-        print menu
-
-        ask input for a math utility selection
-        call appropriate math function
-
-        input numbers as argument(s)
-        return updated number to console
-
-*/
