@@ -72,18 +72,6 @@ public class ScientificFeatures {
 //        );
 //    }
 //
-//
-//    //Switch display method
-//    public void switchDisplayMode() {
-//        Console.println("Display Options"
-//                + "\n1: Binary"
-//                + "\n2: Octal"
-//                + "\n3: Decimal"
-//                + "\n4: Hexadecimal"
-//                + "\n5: Go back to Main Menu"
-//        );
-//    }
-//
 //    // --- SCIENTIFIC METHOD CALCULATIONS -- //
 //
 //    //Sine method
