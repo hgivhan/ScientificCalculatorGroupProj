@@ -20,15 +20,16 @@ public class Memory {
         );
     }
 
-    public void updateMemory(Double memoryInput){
+    public Double updateMemory(Double memoryInput){ // removed void
         this.memory += memoryInput;
-        this.memoryChanged = true;
+        memoryChanged();
+        return this.memory; // added this line to pass the test
     }
 
     public void clearMemory() {
         if(this.memory != 0) {
             this.memory = DEFAULT_MEMORY_VALUE;
-            this.memoryChanged = true;
+            memoryChanged();
         }
     }
 
@@ -36,4 +37,7 @@ public class Memory {
         return this.memory;
     }
 
+    public void memoryChanged() { // created this method and called it in methods above
+        this.memoryChanged = true;
+    }
 }
