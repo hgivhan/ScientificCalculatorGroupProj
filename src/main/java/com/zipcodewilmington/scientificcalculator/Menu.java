@@ -9,6 +9,7 @@ public class Menu {
     public void runMenu() {
         Core core = new Core();
         CoreAdvanced coreAdvanced = new CoreAdvanced();
+        ScientificFeatures scientificCalc = new ScientificFeatures();
         Memory memoryFunction = new Memory();
 
         Scanner scan = new Scanner(System.in);
@@ -76,6 +77,8 @@ public class Menu {
 
                         advNum1 = Console.getDoubleInput("Enter the input for x: ");
 
+                        // --- INSERT CODE TO UTILIZE VALUE IN MEMORY HERE --- //
+
                         Double advAnswer = new Double(0);
 
                         if (modeAdv.equals("1")) {
@@ -105,7 +108,52 @@ public class Menu {
                         break;
 
                     case 3:
-                        // ScientificCalculator.scientificCalculatorOptions();
+                        scientificCalc.scientificMenu();
+
+                        String modeSci = Console.getStringInput("Enter the mode: ");
+
+                        Double sciNum = new Double(0);
+
+                        sciNum = Console.getDoubleInput("Enter the input for x: ");
+
+                        // --- INSERT CODE TO UTILIZE VALUE IN MEMORY HERE --- //
+
+                        Double sciAnswer = new Double(0);
+
+                        if (modeSci.equals("1")) {
+                            sciAnswer = scientificCalc.calcSine(sciNum);
+                        } else if (modeSci.equals("2")) {
+                            sciAnswer = scientificCalc.calcCosine(sciNum);
+                        } else if (modeSci.equals("3")) {
+                            sciAnswer = scientificCalc.calcTangent(sciNum);
+                        } else if (modeSci.equals("4")) {
+                            sciAnswer = scientificCalc.calcInverseSine(sciNum);
+                        } else if (modeSci.equals("5")) {
+                            sciAnswer = scientificCalc.calcInverseCosine(sciNum);
+                        } else if (modeSci.equals("6")) {
+                            sciAnswer = scientificCalc.calcInverseTangent(sciNum);
+                        } else if (modeSci.equals("7")) {
+                            sciAnswer = scientificCalc.calcLog(sciNum);
+                        } else if (modeSci.equals("8")) {
+                            sciAnswer = scientificCalc.calcInverseLog(sciNum);
+                        } else if (modeSci.equals("9")) {
+                            sciAnswer = scientificCalc.calcNaturalLog(sciNum);
+                        } else if (modeSci.equals("10")) {
+                            sciAnswer = scientificCalc.calcInverseNaturalLog(sciNum);
+                        } else if (modeSci.equals("11")) {
+                            sciAnswer = scientificCalc.calcFactorial(sciNum);
+                        } else if (modeSci.equals("12")) {
+                            sciAnswer = scientificCalc.calcAbs(sciNum);
+                        } else if (modeSci.equals("13")) {
+                            sciAnswer = scientificCalc.calcAgeDogYears(sciNum);
+                        } else if (modeSci.equals("14")) {
+                            break;
+                        } else {
+                            Console.println("Not a valid selection, please select again");
+                        }
+
+                        Console.println(Double.toString(sciAnswer));
+
                         break;
 
                     case 4:
